@@ -13,3 +13,7 @@ DATA BLOCK:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Binary dump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+Cannot view Example.blob on Github, Download the file and view in a hex editor, e.g. hexed.it
