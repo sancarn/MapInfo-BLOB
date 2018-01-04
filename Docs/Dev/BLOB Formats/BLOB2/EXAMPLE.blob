@@ -1,0 +1,11 @@
+MapInfo-BLOB Format
+See: https://github.com/sancarn/MapInfo-BLOB/dist/MapInfo-BLOB.mbx for the tool to read this file.
+~~~ HEADER START ~~~
+A\1.txt
+
+A\2.txt
+
+A\3.txt
+
+~~~ DATA START ~~~
+Hello worldI am great!Yes you are
