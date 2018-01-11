@@ -23,6 +23,8 @@ This is to be compiled to `MapInfo-BLOB.mbx`. The MBX will implement a ribbon bu
 
 Returns the Blob descriptions for an open table or TAB/BLOB file as a readonly table.
 
+The data for the previously accessed table will be cached for use in further operations.
+
 #### BLOB_Add(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string, ByVal sFilePath as string)
 
 Adds a BLOB to an existing table.
@@ -31,10 +33,14 @@ Adds a BLOB to an existing table.
 
 Removes a BLOB from an existing table.
 
-#### BLOB_Copy(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string, ByVal sToPath as string) as string
+#### BLOB_Copy(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string, ByVal sToPath as string)
 
 Copies a BLOB from an existing table to a new destination.
 
-#### BLOB_Move(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string, ByVal sToPath as string) as string
+#### BLOB_Move(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string, ByVal sToPath as string)
 
 Moves a BLOB from an existing table to a new destination.
+
+#### BLOB_Open(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string)
+
+Opens a BLOB from an existing table. Opens the blob with the default application specified in the name.
