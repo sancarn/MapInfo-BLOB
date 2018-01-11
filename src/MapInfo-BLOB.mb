@@ -1,0 +1,53 @@
+Include "FULL_RIBBON.DEF"
+Include "Enums.def"
+
+
+Declare Sub Main
+Declare Sub EndHandler
+Declare Sub MakeRibbon()
+Declare Sub MakeMenu()
+Declare Sub GetBlob()
+
+
+'Gui declares:
+Declare Sub GuiManageBlobs()	'Opens a GUI which allows one to delete, read and write new blobs to the record.
+
+
+Global mbxPath as String
+
+
+
+Sub Main()
+	'Get location of MBX <-- Maybe we should store ribbon image data in a mapbasic clob?
+	mbxPath = ApplicationDirectory$()
+	mbxPath = PathToDirectory$(mbxPath)
+	
+	'
+	If ApplicatonInfo(3) == "x64" then	'Maybe this should be included in SimpleRibbon?
+		Call MakeRibbon()
+	Else
+		Call MakeMenu()
+	End If
+End Sub
+
+
+Sub MakeRibbon()
+	RIBBON_AddSimpleButton("TABLE", "BLOB", "View", "M", mbxPath & "icons\read.png", "", "GuiManageBlobs")
+End Sub
+
+Sub MakeMenu()
+	'Do stuff...
+End Sub
+
+
+Sub GetBlob(byval tableName as string)
+	
+	Dim blobField as string
+	blobField = MetadataGet(tableName,"\blob\field")
+	
+End Sub
+
+
+Sub GuiManageBlobs()
+
+end sub
