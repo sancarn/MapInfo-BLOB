@@ -21,30 +21,20 @@ This is to be compiled to `MapInfo-BLOB.mbx`. The MBX will implement a ribbon bu
 
 #### BLOB_GetDict(ByVal sTOFN as string) as string
 
-##### Description
-
 Returns the Blob descriptions for an open table or TAB/BLOB file as a readonly table.
 
 #### BLOB_Add(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string, ByVal sFilePath as string)
-
-##### Description
 
 Adds a BLOB to an existing table.
 
 #### BLOB_Remove(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string)
 
-##### Description
-
 Removes a BLOB from an existing table.
 
 #### BLOB_Copy(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string, ByVal sToPath as string) as string
 
-##### Description
-
 Copies a BLOB from an existing table to a new destination.
 
 #### BLOB_Move(ByVal sTOFN as string, ByVal ID as LargeInt, ByVal sName as string, ByVal sToPath as string) as string
-
-##### Description
 
 Moves a BLOB from an existing table to a new destination.
